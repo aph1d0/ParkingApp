@@ -2,9 +2,6 @@ package com.android.parkingapp;
 
 import java.util.Date;
 
-/**
- * Created by Abhi on 20 Jan 2018 020.
- */
 
 public class User {
     String username;

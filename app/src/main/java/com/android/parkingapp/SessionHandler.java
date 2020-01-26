@@ -26,7 +26,8 @@ public class SessionHandler {
     }
 
     /**
-     * Logs in the user by saving user details and setting session
+     *
+     * Loguje użytkownika zapisując jego dane i ustanawiając sesje
      *
      * @param username
      * @param fullName
@@ -43,7 +44,8 @@ public class SessionHandler {
     }
 
     /**
-     * Checks whether user is logged in
+     *
+     * Sprawdź czy użytkownik jest zalogowany
      *
      * @return
      */
@@ -67,7 +69,7 @@ public class SessionHandler {
     }
 
     /**
-     * Fetches and returns user details
+     * Pobiera i zwraca dane użytkownika
      *
      * @return user details
      */
@@ -85,7 +87,7 @@ public class SessionHandler {
     }
 
     /**
-     * Logs out user by clearing the session
+     * Wylogowuje uzytkownika z końcem sesji
      */
     public void logoutUser(){
         mEditor.clear();

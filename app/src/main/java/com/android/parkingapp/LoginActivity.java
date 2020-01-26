@@ -91,7 +91,7 @@ public class LoginActivity extends AppCompatActivity {
         displayLoader();
         JSONObject request = new JSONObject();
         try {
-            //Populate the request parameters
+            //Wstaw wartości do requesta
             request.put(KEY_USERNAME, username);
             request.put(KEY_PASSWORD, password);
 
@@ -104,7 +104,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
                         pDialog.dismiss();
                         try {
-                            //Check if user got logged in successfully
+                            //Sprawdź czy użytkownik się zalogował poprawnie
 
                             if (response.getInt(KEY_STATUS) == 0) {
                                 session.loginUser(username,response.getString(KEY_FULL_NAME));
@@ -125,21 +125,18 @@ public class LoginActivity extends AppCompatActivity {
                     public void onErrorResponse(VolleyError error) {
                         pDialog.dismiss();
 
-                        //Display error message whenever an error occurs
+                        //Wyświetl error jeżeli wystąpi
                         Toast.makeText(getApplicationContext(),
                                 error.getMessage(), Toast.LENGTH_SHORT).show();
 
                     }
                 });
 
-        // Access the RequestQueue through your singleton class.
+        // Odwołaj się do kolejki requestów poprzez klasę singleton.
         MySingleton.getInstance(this).addToRequestQueue(jsArrayRequest);
     }
 
-    /**
-     * Validates inputs and shows error if any
-     * @return
-     */
+
     private boolean validateInputs() {
         if(KEY_EMPTY.equals(username)){
             etUsername.setError("Login nie może być pusty!");
