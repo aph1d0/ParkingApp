@@ -65,7 +65,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     /**
-     * Launch Dashboard Activity on Successful Login
+     * Uruchom Dashboard Activity po poprawnym zalogowaniu
      */
     private void loadDashboard() {
         Intent i = new Intent(getApplicationContext(), DashboardActivity.class);
@@ -75,7 +75,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     /**
-     * Display Progress bar while Logging in
+     * Wyświetl pasek postepu podczas logowania sie
      */
 
     private void displayLoader() {
